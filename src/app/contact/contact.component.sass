@@ -1,0 +1,88 @@
+@import "../../variables"
+
+.banner-contact
+    width: 100%
+    height: 100vh
+    background-image: url('/assets/asset3.jpg')
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    position: relative
+
+.contact-wrapper
+    height: 100vh
+    width: 100%
+    color: #333
+    background-color: #ffffffd5
+    display: flex
+    position: absolute
+    z-index: 2
+    top: 400vh
+
+    .left, .right 
+        height: 100vh
+        display: flex
+        justify-content: center
+        align-items: center
+    .left
+        width: 40%
+        .form-wrapper
+            width: 100%
+            display: flex
+            flex-direction: column
+            justify-content: center
+            text-align: center
+            .name, .phone, .mail, .text
+                width: 75%
+            .button button
+                width: 200px
+
+    .right 
+        width: 60%
+        .info-wrapper
+            width: 100%
+            height: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+            .google-maps
+                height: 40%
+                width: 90%
+                background-color: #8d8c8c
+                border-radius: 5px
+            .inner
+                height: 30%
+                width: 90%
+                display: flex
+                justify-content: space-around
+                align-items: center
+            .insta
+                display: flex
+                align-items: center
+                justify-content: center
+                flex-direction: column
+                a
+                    display: block
+                    text-align: center
+                    margin-bottom: 1rem
+                    font-weight: bold
+                    text-decoration: none
+                    color: #333333
+                    i
+                        font-size: 18px
+                    &:hover
+                        color: $yellow
+                    &:nth-child(2)
+                        i
+                            font-size: 40px
+                    &:nth-child(2):hover
+                        i
+                            font-size: 40px
+                            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)
+                            -webkit-background-clip: text
+                            background-clip: tex
+                            -webkit-text-fill-color: transparent
+                        
+                
+        

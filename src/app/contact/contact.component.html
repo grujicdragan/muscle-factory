@@ -1,0 +1,62 @@
+<div class="banner-contact"></div>
+<div class="contact-wrapper">
+    <div class="left">
+        <div class="form-wrapper">
+            <h4>Zakažite besplatan probni trening!</h4>
+            <form>
+                <mat-form-field appearance="outline" class="name" hideRequiredMarker>
+                    <mat-label class="lbl">Name</mat-label>
+                    <input matInput required placeholder="Enter your name" [formControl]="name">
+                    <mat-error *ngIf="name.invalid">{{getErrorMessageName()}}</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="phone" hideRequiredMarker>
+                    <mat-label class="lbl">Phone</mat-label>
+                    <input matInput required placeholder="Enter your phone" [formControl]="phone">
+                    <mat-error *ngIf="phone.invalid">{{getErrorMessagePhone()}}</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="mail" hideRequiredMarker>
+                    <mat-label class="lbl">Email</mat-label>
+                    <input matInput placeholder="example@mail.com" [formControl]="mail" required>
+                    <mat-error *ngIf="mail.invalid">{{getErrorMessageMail()}}</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="text" hideRequiredMarker>
+                    <mat-label class="lbl">Message</mat-label>
+                    <textarea matInput rows="6" required placeholder="Enter your message" [formControl]="message"></textarea>
+                    <mat-error *ngIf="message.invalid">{{getErrorMessageMessage()}}</mat-error>
+                </mat-form-field>
+                <div class="button">
+                    <button mat-raised-button [disabled]="mail.invalid || name.invalid || phone.invalid || message.invalid" (click)="sendMail()">
+                        {{ btnText }}
+                    </button>
+                    <div style="color: green;">{{ messageText }}</div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="right">
+        <div class="info-wrapper">
+            <div class="google-maps"></div>
+            <div class="inner">
+                <div class="inner-left">
+
+                    <p><i class="fas fa-map-marker-alt"></i>&nbsp; Kneza Lazara 34, 35000 Jagodina</p>
+                    <p><i class="fas fa-phone-alt"></i>&nbsp; +381644569067 - Stefan</p>
+                    <p><i class="fas fa-phone-alt"></i>&nbsp; +381611344199 - Danilo</p>
+
+                </div>
+                <div class="inner-right">
+
+
+                    <p><i class="fas fa-hourglass-half"></i>&nbsp; Pon - Pet: 09.00h - 22.00h</p>
+                    <p><i class="fas fa-hourglass-half"></i>&nbsp; Sub: 12.00h - 22.00h</p>
+                    <p><i class="fas fa-hourglass-half"></i>&nbsp; Ned: Neradni dan.</p>
+
+                </div>
+            </div>
+            <div class="insta">
+                <a href="https://www.instagram.com/gym_muscle_factory/?hl=en" target="_blank">Pratite nas na Instagramu!</a>
+                <a href="https://www.instagram.com/gym_muscle_factory/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
