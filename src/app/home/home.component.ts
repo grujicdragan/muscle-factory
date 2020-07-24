@@ -10,15 +10,13 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  // toggle() {
-  //   const flexNav = document.getElementsByClassName('flex-nav')[0];
-  //   const icons = document.getElementsByClassName('icons-i')[0];
-  //   const x = document.getElementsByClassName('toggle-button')[0];
+  toggle() {
+    const navLinks = document.getElementsByClassName('nav-links')[0];
+    const x = document.getElementsByClassName('toggle-button')[0];
 
-  //   flexNav.classList.toggle('active');
-  //   icons.classList.toggle('active');
-  //   x.classList.toggle('active');
-  // }
+    navLinks.classList.toggle('active');
+    x.classList.toggle('active');
+  }
 
   toHome() {
     document.getElementById('home').scrollIntoView({ behavior: 'smooth' });

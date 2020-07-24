@@ -1,23 +1,12 @@
 @import "../../variables"
 
-.banner-contact
-    width: 100%
-    height: 100vh
-    background-image: url('../../assets/asset3.jpg')
-    background-position: center
-    background-repeat: no-repeat
-    background-size: cover
-    position: relative
-
 .contact-wrapper
     height: 100vh
     width: 100%
     color: #333
     background-color: #ffffffd5
     display: flex
-    position: absolute
     z-index: 2
-    top: 400vh
 
     .left, .right 
         height: 100vh
@@ -85,5 +74,42 @@
                             background-clip: tex
                             -webkit-text-fill-color: transparent
                         
-                
+@media ( max-width: 500px )
+    .contact-wrapper 
+        flex-direction: column
+        height: 200vh
+        padding-top: 20px
+        .left, .right 
+            height: 100vh
+            width: 100vw
+            display: flex
+            justify-content: center
+            align-items: center
+
+    .form-wrapper
+        max-height: 100vh
+        h4
+            font-size: 12px
+        .name, .phone, .mail, .text
+            width: 90% !important
+        
+    .info-wrapper
+        .inner
+            height: 20% !important
+            margin-top: 10px
+            p
+                font-size: 8px
+        .insta
+            font-size: 8px
+            a
+                &:nth-child(2)
+                    i
+                        font-size: 40px
+                        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)
+                        -webkit-background-clip: text
+                        background-clip: tex
+                        -webkit-text-fill-color: transparent
+
+
+    
         
