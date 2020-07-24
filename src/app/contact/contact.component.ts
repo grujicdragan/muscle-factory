@@ -61,7 +61,7 @@ export class ContactComponent implements OnInit {
       message: this.message.value,
     };
     this.service
-      .sendEmail('https://mail-control-app.herokuapp.com/send', contact)
+      .sendEmail('https://mail-muscle-factory.herokuapp.com/send', contact)
       .subscribe(
         (data) => {
           let res: any = data;
