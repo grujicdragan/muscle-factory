@@ -3,12 +3,11 @@
 .banner
     width: 100vw
     height: 100vh
-    background-image: url('../../assets/pic1.png')
+    background-image: url('../../assets/banner1.jpg')
     background-position: center
     background-repeat: no-repeat
     background-size: cover
     background-attachment: fixed
-    filter: blur(2px)
     position: relative
 
 header
@@ -167,64 +166,77 @@ header
         transform: translateY(0)
         opacity: 1
 
-@media (min-width: 1300px) 
-
+@media (min-width: 1600px) 
+    h1
+        font-size: 40px
+        
     header
         height: 70px
+        .inner-header
+            .nav-links
+                .nav-link
+                    a
+                        font-size: 16px
+            .logo
+                h1, h2 
+                    font-size: 28px
+        
     .banner-header
         h1
-            font-size: 85px
+            font-size: 80px
         h2
-            font-size: 35px
+            font-size: 30px
         .fa-angle-double-down
             font-size: 40px
             top: 55vh
 
-@media ( max-width: 500px )
+@media ( max-width: 600px )
     header
         height: 40px
         z-index: 10
-    .inner-header
-        width: 100% !important
-        .logo
-            .img1
-                width: 30px !important
-                height: 30px !important
-                margin: 0 5px 0 10px !important
-            h1, h2 
-                font-size: 15px !important
-        .toggle-button 
-            display: flex !important
-            align-self: end
+        .inner-header
+            width: 100% !important
+            .toggle-button 
+                display: flex !important
+                align-self: end
 
-        .toggle-button.active #bar2 
-            background-color: transparent !important
+            .toggle-button.active 
+                #bar2 
+                    background-color: transparent !important
     
-        .toggle-button.active #bar1
-            transition: 0.4s !important
-            transform: rotate(-45deg), translate(-8px, 6px) !important
+            .toggle-button.active 
+                #bar1
+                    transition: 0.4s !important
+                    transform: rotate(-45deg), translate(-8px, 6px) !important
     
-        .toggle-button.active #bar3 
-            transform: rotate(45deg), translate(-6px, -6px) !important
-            transition: 0.4s !important
+            .toggle-button.active 
+                #bar3 
+                    transform: rotate(45deg), translate(-6px, -6px) !important
+                    transition: 0.4s !important
+            .logo
+                .img1
+                    width: 30px !important
+                    height: 30px !important
+                    margin: 0 5px 0 10px !important
+                h1, h2 
+                    font-size: 15px !important
 
-    
-        .nav-links
-            display: none !important
+            .nav-links
+                display: none !important
 
-        .nav-links.active
-            display: flex !important
-            flex-direction: column
-            align-items: center
-            width: 100%
-            height: 26vh
-            position: absolute
-            top: 40px
-            left: 0
-            padding: 0
-            margin: 0
-            background-color: #333333
-            z-index: 5
+            .nav-links.active
+                display: flex !important
+                flex-direction: column
+                align-items: center
+                width: 100%
+                height: 26vh
+                position: absolute
+                top: 40px
+                left: 0
+                padding: 0
+                margin: 0
+                background-color: #333333
+                z-index: 5
 
     .banner-header 
         width: 100vw
