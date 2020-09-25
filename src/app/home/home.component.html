@@ -2,10 +2,12 @@
 
 <header id="header">
     <div class="inner-header">
-        <a (click)="toggle()" class="toggle-button">
-            <span class="bar bar1" id="bar1 "></span>
-            <span class="bar " id="bar2 "></span>
-            <span class="bar " id="bar3 "></span>
+        <a (click)="toggle()">
+            <div class="bars" id="toggleBtn">
+                <div class="bar" id="bar1"></div>
+                <div class="bar " id="bar2"></div>
+                <div class="bar " id="bar3"></div>
+            </div>
         </a>
         <div class="logo" (click)="toHome() ">
             <img src="assets/Logo.png " class="img1 " alt="Logo picture ">
@@ -13,10 +15,10 @@
             <h2>factory</h2>
         </div>
         <ul class="nav-links ">
-            <li class="nav-link "><a (click)="toAbout() ">o nama</a></li>
-            <li class="nav-link "><a (click)="toPrices() ">cenovnik</a></li>
-            <li class="nav-link "><a (click)="toGallery() ">galerija</a></li>
-            <li class="nav-link "><a (click)="toContact() ">kontakt</a></li>
+            <li class="nav-link"><a (click)="toAbout()">o nama</a></li>
+            <li class="nav-link"><a (click)="toPrices()">cenovnik</a></li>
+            <li class="nav-link"><a (click)="toGallery()">galerija</a></li>
+            <li class="nav-link"><a (click)="toContact()">kontakt</a></li>
         </ul>
     </div>
 </header>
@@ -26,7 +28,7 @@
     <h1>U NAJBOLJI GYM</h1><br>
     <h1>U GRADU.</h1><br>
     <h3>FABRIKA NAJKVALITETNIJE MIŠIĆNE MASE</h3>
-    <div class="arrow ">
-        <a (click)="toAbout() "><i class="fas fa-angle-double-down "></i></a>
-    </div>
+</div>
+<div class="arrow ">
+    <a (click)="toAbout() "><i class="fas fa-angle-double-down "></i></a>
 </div>

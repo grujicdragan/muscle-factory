@@ -6,35 +6,48 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.sass'],
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   toggle() {
     const navLinks = document.getElementsByClassName('nav-links')[0];
-    const x = document.getElementsByClassName('toggle-button')[0];
+    const toggleBtn = document.getElementById('toggleBtn');
 
     navLinks.classList.toggle('active');
-    x.classList.toggle('active');
+    toggleBtn.classList.toggle('active');
+  }
+
+  removeActive() {
+    const navLinks = document.getElementsByClassName('nav-links')[0];
+    const toggleBtn = document.getElementById('toggleBtn');
+
+    navLinks.classList.remove('active');
+    toggleBtn.classList.remove('active');
   }
 
   toHome() {
     document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
+    this.removeActive();
   }
 
   toAbout() {
     document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+    this.removeActive();
   }
 
   toPrices() {
     document.getElementById('prices').scrollIntoView({ behavior: 'smooth' });
+    this.removeActive();
   }
 
   toGallery() {
     document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' });
+    this.removeActive();
   }
 
   toContact() {
     document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    this.removeActive();
   }
 }
